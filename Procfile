@@ -1,1 +1,2 @@
-web: PYTHONPATH=server uvicorn app.main:app --host 0.0.0.0 --port $PORT
+web: PYTHONPATH=server python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+
