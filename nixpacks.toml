@@ -1,0 +1,12 @@
+providers = ["python"]
+
+[variables]
+PYTHONPATH = "server"
+
+[phases.install]
+cmds = [
+  "pip3 install -r server/requirements.txt"
+]
+
+[start]
+cmd = "python3 -m uvicorn app.main:app --host 0.0.0.0 --port $PORT"
